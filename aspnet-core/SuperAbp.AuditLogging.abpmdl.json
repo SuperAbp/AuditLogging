@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "SuperAbp.AuditLogging.Domain.Shared": {
+      "path": "src/SuperAbp.AuditLogging.Domain.Shared/SuperAbp.AuditLogging.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.Domain": {
+      "path": "src/SuperAbp.AuditLogging.Domain/SuperAbp.AuditLogging.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.Application.Contracts": {
+      "path": "src/SuperAbp.AuditLogging.Application.Contracts/SuperAbp.AuditLogging.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.Application": {
+      "path": "src/SuperAbp.AuditLogging.Application/SuperAbp.AuditLogging.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.EntityFrameworkCore": {
+      "path": "src/SuperAbp.AuditLogging.EntityFrameworkCore/SuperAbp.AuditLogging.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.MongoDB": {
+      "path": "src/SuperAbp.AuditLogging.MongoDB/SuperAbp.AuditLogging.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.HttpApi": {
+      "path": "src/SuperAbp.AuditLogging.HttpApi/SuperAbp.AuditLogging.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.HttpApi.Client": {
+      "path": "src/SuperAbp.AuditLogging.HttpApi.Client/SuperAbp.AuditLogging.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.TestBase": {
+      "path": "test/SuperAbp.AuditLogging.TestBase/SuperAbp.AuditLogging.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AuditLogging.EntityFrameworkCore.Tests": {
+      "path": "test/SuperAbp.AuditLogging.EntityFrameworkCore.Tests/SuperAbp.AuditLogging.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AuditLogging.MongoDB.Tests": {
+      "path": "test/SuperAbp.AuditLogging.MongoDB.Tests/SuperAbp.AuditLogging.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AuditLogging.Domain.Tests": {
+      "path": "test/SuperAbp.AuditLogging.Domain.Tests/SuperAbp.AuditLogging.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AuditLogging.Application.Tests": {
+      "path": "test/SuperAbp.AuditLogging.Application.Tests/SuperAbp.AuditLogging.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AuditLogging.HttpApi.Host": {
+      "path": "host/SuperAbp.AuditLogging.HttpApi.Host/SuperAbp.AuditLogging.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AuditLogging.Web": {
+      "path": "src/SuperAbp.AuditLogging.Web/SuperAbp.AuditLogging.Web.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/SuperAbp.AuditLogging.HttpApi.Client.ConsoleTestApp/SuperAbp.AuditLogging.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AuditLogging.Web.Host": {
+      "path": "host/SuperAbp.AuditLogging.Web.Host/SuperAbp.AuditLogging.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AuditLogging.IdentityServer": {
+      "path": "host/SuperAbp.AuditLogging.IdentityServer/SuperAbp.AuditLogging.IdentityServer.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AuditLogging.Host.Shared": {
+      "path": "host/SuperAbp.AuditLogging.Host.Shared/SuperAbp.AuditLogging.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AuditLogging.Web.Unified": {
+      "path": "host/SuperAbp.AuditLogging.Web.Unified/SuperAbp.AuditLogging.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AuditLogging.Blazor": {
+      "path": "src/SuperAbp.AuditLogging.Blazor/SuperAbp.AuditLogging.Blazor.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.Blazor.Host": {
+      "path": "host/SuperAbp.AuditLogging.Blazor.Host/SuperAbp.AuditLogging.Blazor.Host.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AuditLogging.Blazor.Server": {
+      "path": "src/SuperAbp.AuditLogging.Blazor.Server/SuperAbp.AuditLogging.Blazor.Server.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.Blazor.WebAssembly": {
+      "path": "src/SuperAbp.AuditLogging.Blazor.WebAssembly/SuperAbp.AuditLogging.Blazor.WebAssembly.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AuditLogging.Blazor.Server.Host": {
+      "path": "host/SuperAbp.AuditLogging.Blazor.Server.Host/SuperAbp.AuditLogging.Blazor.Server.Host.abppkg.json",
+      "folder": "host"
+    }
+  }
+}

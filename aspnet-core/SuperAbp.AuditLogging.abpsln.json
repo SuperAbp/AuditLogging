@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SuperAbp.AuditLogging": {
+      "path": "SuperAbp.AuditLogging.abpmdl.json"
+    }
+  }
+}

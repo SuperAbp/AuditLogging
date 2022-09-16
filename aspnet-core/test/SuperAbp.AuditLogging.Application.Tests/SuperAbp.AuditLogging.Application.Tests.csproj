@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>SuperAbp.AuditLogging</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SuperAbp.AuditLogging.Application\SuperAbp.AuditLogging.Application.csproj" />
+    <ProjectReference Include="..\SuperAbp.AuditLogging.Domain.Tests\SuperAbp.AuditLogging.Domain.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+  </ItemGroup>
+
+</Project>
