@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EntityFrameworkCore\AuditLoggingDbContext.cs" />
+    <Compile Remove="EntityFrameworkCore\AuditLoggingDbContextModelCreatingExtensions.cs" />
+    <Compile Remove="EntityFrameworkCore\AuditLoggingModelBuilderConfigurationOptions.cs" />
+    <Compile Remove="EntityFrameworkCore\IAuditLoggingDbContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
 	  <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="5.2.0" />
     <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="5.2.0" />
     <ProjectReference Include="..\SuperAbp.AuditLogging.Domain\SuperAbp.AuditLogging.Domain.csproj" />

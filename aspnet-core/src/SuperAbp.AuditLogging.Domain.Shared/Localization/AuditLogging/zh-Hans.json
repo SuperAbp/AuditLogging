@@ -1,7 +1,31 @@
 {
   "culture": "zh-Hans",
   "texts": {
-    "MyAccount": "我的账户",
-    "SamplePageMessage": "AuditLogging模块的示例页面"
+    "Permission:AuditLogging": "审计日志",
+    "Permission:AuditLogs": "审计日志",
+    "DisplayName:ApplicationName": "应用名称",
+    "DisplayName:UserName": "用户",
+    "DisplayName:TenantName": "租户",
+    "DisplayName:ExecutionTime": "执行时间",
+    "DisplayName:ExecutionDuration": "时长",
+    "DisplayName:ClientIpAddress": "客户端IP",
+    "DisplayName:HttpMethod": "请求方式",
+    "DisplayName:Url": "地址",
+    "DisplayName:HttpStatusCode": "响应状态码",
+    "DisplayName:Exceptions": "异常",
+    "DisplayName:ServiceName": "服务名称",
+    "DisplayName:MethodName": "方法名称",
+    "DisplayName:Parameters": "参数",
+    "DisplayName:Comments": "说明",
+    "DisplayName:BrowserInfo": "浏览器",
+    "BaseInfo": "基本信息",
+    "Detail": "详情",
+    "Close": "关闭",
+    "ActionInfo": "方法信息",
+    "DataStart": "数据开始",
+    "DataEnd": "数据结束",
+    "PlaceHolder": "请输入{0}",
+    "ChoosePlaceHolder": "请选择{0}",
+    "View": "查看"
   }
 }

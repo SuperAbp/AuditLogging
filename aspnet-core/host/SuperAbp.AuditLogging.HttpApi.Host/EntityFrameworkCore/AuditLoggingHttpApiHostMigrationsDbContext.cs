@@ -8,13 +8,10 @@ public class AuditLoggingHttpApiHostMigrationsDbContext : AbpDbContext<AuditLogg
     public AuditLoggingHttpApiHostMigrationsDbContext(DbContextOptions<AuditLoggingHttpApiHostMigrationsDbContext> options)
         : base(options)
     {
-
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-
-        modelBuilder.ConfigureAuditLogging();
     }
 }

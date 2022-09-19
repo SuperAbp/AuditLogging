@@ -15,11 +15,5 @@ public class AuditLoggingEntityFrameworkCoreModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddAbpDbContext<AuditLoggingDbContext>(options =>
-        {
-            /* Add custom repositories here. Example:
-             * options.AddRepository<Question, EfCoreQuestionRepository>();
-             */
-        });
     }
 }

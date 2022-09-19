@@ -4,7 +4,6 @@ using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Snow.AuditLogging.Admin;
 using SuperAbp.AuditLogging.Dtos;
 using SuperAbp.AuditLogging.Permissions;
 using Volo.Abp.Application.Dtos;

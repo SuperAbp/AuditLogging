@@ -4,7 +4,7 @@ using SuperAbp.AuditLogging.Dtos;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
-namespace Snow.AuditLogging.Admin
+namespace SuperAbp.AuditLogging
 {
     /// <summary>
     /// 日志管理
