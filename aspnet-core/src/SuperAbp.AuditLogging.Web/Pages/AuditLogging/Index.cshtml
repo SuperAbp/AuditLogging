@@ -1,11 +1,43 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @using Microsoft.Extensions.Localization
 @using SuperAbp.AuditLogging.Localization
+@using SuperAbp.AuditLogging.Web.Menus
 @using SuperAbp.AuditLogging.Web.Pages.AuditLogging
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.AbpPageToolbar
 @model SuperAbp.AuditLogging.Web.Pages.AuditLogging.IndexModel
 @inject IStringLocalizer<AuditLoggingResource> L
 
+@inject IAuthorizationService Authorization
+@inject IPageLayout PageLayout
 @{
+    PageLayout.Content.Title = L["AuditLogs"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:AuditLogging"].Value);
+    PageLayout.Content.MenuItemName = AuditLoggingMenus.Logging;
 }
-<h1>AuditLogging</h1>
-<p>@L["SamplePageMessage"]</p>
+@section Styles{
+    <abp-style-bundle name="@nameof(IndexModel)">
+        <abp-style src="/Pages/AuditLogging/description.css" />
+        <abp-style src="/Pages/AuditLogging/detailModal.css" />
+    </abp-style-bundle>
+}
+@section Scripts{
+    <abp-script src="/Pages/AuditLogging/index.js"></abp-script>
+}
+<abp-card id="AuditLogsWrapper">
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["AuditLogs"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-end">
+                @await Component.InvokeAsync(typeof(AbpPageToolbarViewComponent), new { pageName = typeof(IndexModel).FullName })
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" class="nowrap"></abp-table>
+    </abp-card-body>
+</abp-card>
+

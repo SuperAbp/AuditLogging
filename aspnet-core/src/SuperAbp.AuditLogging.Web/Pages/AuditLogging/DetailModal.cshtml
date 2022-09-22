@@ -1,0 +1,99 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SuperAbp.AuditLogging.Localization
+@using SuperAbp.AuditLogging.Web.Pages
+@using SuperAbp.AuditLogging.Web.Pages.AuditLogging
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@inject IHtmlLocalizer<AuditLoggingResource> L
+@model DetailModalModel
+@{
+    Layout = null;
+}
+<abp-modal size="ExtraLarge">
+    <abp-modal-header title="@L["Detail"].Value"></abp-modal-header>
+    <abp-modal-body>
+        <span class="title">@L["BaseInfo"]</span>
+        <div class="descriptions-row row-cols-3" style="margin-top: 16px;">
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["ApplicationName"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.ApplicationName</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["Url"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.Url</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["HttpMethod"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.HttpMethod</span>
+                </div>
+            </div>
+        </div>
+        <div class="descriptions-row row-cols-3">
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["TenantName"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.TenantName</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["UserName"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.UserName</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["ClientIpAddress"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.ClientIpAddress</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="descriptions-row row-cols-3">
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["ExecutionTime"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.ExecutionTime</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["ExecutionDuration"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.ExecutionDuration</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["HttpStatusCode"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.HttpStatusCode</span>
+                </div>
+            </div>
+        </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["BrowserInfo"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.BrowserInfo</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["Comments"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.Comments</span>
+                </div>
+            </div>
+            <div class="descriptions-item">
+                <div class="descriptions-item-container">
+                    <span class="descriptions-item-label">@L["Exceptions"]</span>
+                    <span class="descriptions-item-content">@Model.AuditLogging.Exceptions</span>
+                </div>
+            </div>
+            <div class="card">
+            <div class="card-header">@L["ActionInfo"]</div>
+            </div>
+    </abp-modal-body>
+</abp-modal>

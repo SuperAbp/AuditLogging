@@ -37,4 +37,10 @@
     <Content Remove="wwwroot\**\*.*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Pages\AuditLogging\description.css" />
+    <None Remove="Pages\AuditLogging\detailModal.css" />
+    <None Remove="Pages\AuditLogging\Index.js" />
+  </ItemGroup>
+
 </Project>

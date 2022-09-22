@@ -5,7 +5,7 @@ using SuperAbp.AuditLogging.Dtos;
 using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 
-namespace SuperAbp.AuditLogging.Controllers
+namespace SuperAbp.AuditLogging
 {
     /// <summary>
     /// 日志管理

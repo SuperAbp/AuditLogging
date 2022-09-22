@@ -26,7 +26,7 @@ public class AuditLoggingDomainSharedModule : AbpModule
         {
             options.Resources
                 .Add<AuditLoggingResource>("en")
-                .AddBaseTypes(typeof(AbpValidationResource))
+                .AddBaseTypes(typeof(Volo.Abp.AuditLogging.Localization.AuditLoggingResource))
                 .AddVirtualJson("/Localization/AuditLogging");
         });
 
