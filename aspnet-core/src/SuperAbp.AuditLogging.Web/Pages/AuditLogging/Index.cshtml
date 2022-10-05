@@ -1,6 +1,7 @@
 ﻿@page
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.Extensions.Localization
+@using SuperAbp.AspNetCore.Mvc.UI.Packages.Select2.Theme
 @using SuperAbp.AuditLogging.Localization
 @using SuperAbp.AuditLogging.Web.Menus
 @using SuperAbp.AuditLogging.Web.Pages.AuditLogging
@@ -17,13 +18,17 @@
     PageLayout.Content.MenuItemName = AuditLoggingMenus.Logging;
 }
 @section Styles{
+    <abp-style-bundle name="@Select2ThemeBundles.Styles.Global"/>
     <abp-style-bundle name="@nameof(IndexModel)">
         <abp-style src="/Pages/AuditLogging/description.css" />
-        <abp-style src="/Pages/AuditLogging/detailModal.css" />
+        <abp-style src="/libs/daterangepicker/daterangepicker.css" />
     </abp-style-bundle>
 }
 @section Scripts{
     <abp-script src="/Pages/AuditLogging/index.js"></abp-script>
+    <abp-script src="/libs/moment/min/moment.min.js" />
+    <abp-script src="/libs/moment/min/locales.min.js" />
+    <abp-script src="/libs/daterangepicker/daterangepicker.js"></abp-script>
 }
 <abp-card id="AuditLogsWrapper">
     <abp-card-header>
@@ -37,6 +42,30 @@
         </abp-row>
     </abp-card-header>
     <abp-card-body>
+            <div class="row">
+                <div class="col">
+                    <select class="form-control" id="search_httpMethod">
+                        <option selected></option>
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PATCH">PATCH</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <input class="form-control" id="search_url"  placeholder="@L["Placeholder", L["Url"]]"/>
+                </div>
+                <div class="col">
+                    <input class="form-control" id="search_httpStatusCode" placeholder="@L["Placeholder", L["HttpStatusCode"]]" />
+                </div>
+                <div class="col">
+                    <input class="form-control" id="search_date" />
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" id="search">@L["Search"]</button>
+                    <button class="btn btn-primary" id="reset">@L["Reset"]</button>
+                </div>
+        </div>
         <abp-table striped-rows="true" class="nowrap"></abp-table>
     </abp-card-body>
 </abp-card>

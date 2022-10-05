@@ -86,14 +86,54 @@
                     <span class="descriptions-item-content">@Model.AuditLogging.Comments</span>
                 </div>
             </div>
-            <div class="descriptions-item">
-                <div class="descriptions-item-container">
-                    <span class="descriptions-item-label">@L["Exceptions"]</span>
-                    <span class="descriptions-item-content">@Model.AuditLogging.Exceptions</span>
-                </div>
+        <div class="descriptions-item">
+            <div class="descriptions-item-container">
+                <span class="descriptions-item-label">@L["Exceptions"]</span>
+                <span class="descriptions-item-content">@Model.AuditLogging.Exceptions</span>
             </div>
-            <div class="card">
-            <div class="card-header">@L["ActionInfo"]</div>
-            </div>
+        </div>
+        <abp-card>
+            <abp-card-header>@L["ActionInfo"]</abp-card-header>
+            <abp-card-body>
+                @foreach (var action in Model.AuditLogging.Actions)
+                {
+                    <div class="descriptions-row row-cols-2" style="margin-top: 16px;">
+                        <div class="descriptions-item">
+                            <div class="descriptions-item-container">
+                                <span class="descriptions-item-label">@L["ServiceName"]</span>
+                                <span class="descriptions-item-content">@action.ServiceName</span>
+                            </div>
+                        </div>
+                        <div class="descriptions-item">
+                            <div class="descriptions-item-container">
+                                <span class="descriptions-item-label">@L["MethodName"]</span>
+                                <span class="descriptions-item-content">@action.MethodName</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="descriptions-row row-cols-2" style="margin-top: 16px;">
+                        <div class="descriptions-item">
+                            <div class="descriptions-item-container">
+                                <span class="descriptions-item-label">@L["ExecutionTime"]</span>
+                                <span class="descriptions-item-content">@action.ExecutionTime</span>
+                            </div>
+                        </div>
+                        <div class="descriptions-item">
+                            <div class="descriptions-item-container">
+                                <span class="descriptions-item-label">@L["ExecutionDuration"]</span>
+                                <span class="descriptions-item-content">@action.ExecutionDuration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="descriptions-item">
+                        <div class="descriptions-item-container">
+                            <span class="descriptions-item-label">@L["Parameters"]</span>
+                            <span class="descriptions-item-content">@action.Parameters</span>
+                        </div>
+                    </div>
+                    <br/>
+                }
+            </abp-card-body>
+        </abp-card>
     </abp-modal-body>
 </abp-modal>

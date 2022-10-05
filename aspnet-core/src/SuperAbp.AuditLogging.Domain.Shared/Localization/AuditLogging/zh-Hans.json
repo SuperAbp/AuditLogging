@@ -2,9 +2,11 @@
   "culture": "zh-Hans",
   "texts": {
     "AuditLogging": "审计日志",
+    "AuditLogs": "审计日志",
     "Permission:AuditLogging": "审计日志",
     "Permission:AuditLogs": "审计日志",
     "ApplicationName": "应用名称",
+    "Reset": "重置",
     "UserName": "用户",
     "TenantName": "租户",
     "ExecutionTime": "执行时间",
@@ -25,8 +27,8 @@
     "ActionInfo": "方法信息",
     "DataStart": "数据开始",
     "DataEnd": "数据结束",
-    "PlaceHolder": "请输入{0}",
-    "ChoosePlaceHolder": "请选择{0}",
+    "Placeholder": "请输入{0}",
+    "ChoosePlaceholder": "请选择{0}",
     "View": "查看"
   }
 }

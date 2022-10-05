@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
+using SuperAbp.AspNetCore.Mvc.UI.Packages.Select2.Theme;
 using SuperAbp.AuditLogging.Localization;
 using SuperAbp.AuditLogging.Web.Menus;
 using Volo.Abp.AspNetCore.Mvc.Localization;
@@ -9,13 +10,15 @@ using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 using SuperAbp.AuditLogging.Permissions;
+using Volo.Abp.Json;
 
 namespace SuperAbp.AuditLogging.Web;
 
 [DependsOn(
     typeof(AuditLoggingApplicationContractsModule),
     typeof(AbpAspNetCoreMvcUiThemeSharedModule),
-    typeof(AbpAutoMapperModule)
+    typeof(AbpAutoMapperModule),
+    typeof(SuperAbpAspNetCoreMvcUiSelect2ThemeModule)
     )]
 public class AuditLoggingWebModule : AbpModule
 {
@@ -34,6 +37,10 @@ public class AuditLoggingWebModule : AbpModule
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
+        Configure<AbpJsonOptions>(options =>
+        {
+            options.DefaultDateTimeFormat = "yyyy-MM-dd HH:mm:ss";
+        });
         Configure<AbpNavigationOptions>(options =>
         {
             options.MenuContributors.Add(new AuditLoggingMenuContributor());

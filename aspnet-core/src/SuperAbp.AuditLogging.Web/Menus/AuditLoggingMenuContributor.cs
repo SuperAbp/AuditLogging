@@ -1,5 +1,6 @@
 ﻿using SuperAbp.AuditLogging.Permissions;
 using System.Threading.Tasks;
+using SuperAbp.AuditLogging.Localization;
 using Volo.Abp.UI.Navigation;
 
 namespace SuperAbp.AuditLogging.Web.Menus;
@@ -18,7 +19,9 @@ public class AuditLoggingMenuContributor : IMenuContributor
     {
         if (await context.IsGrantedAsync(AuditLoggingPermissions.AuditLogs.Default))
         {
-            context.Menu.GetAdministration().AddItem(new ApplicationMenuItem(AuditLoggingMenus.Prefix, displayName: "AuditLogging", "~/AuditLogging", icon: "fa fa-globe"));
+            var l = context.GetLocalizer<AuditLoggingResource>();
+
+            context.Menu.GetAdministration().AddItem(new ApplicationMenuItem(AuditLoggingMenus.Prefix, displayName: l["AuditLogging"], "~/AuditLogging", icon: "fa fa-globe"));
         }
     }
 }
