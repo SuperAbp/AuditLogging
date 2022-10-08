@@ -50,8 +50,8 @@
                 scrollX: true,
                 paging: true,
                 ajax: abp.libs.datatables.createAjax(_auditLoggingAppService.getList, function () {
-                        return initParams();
-                    }
+                    return initParams();
+                }
                 ),
                 columnDefs: [
                     {
@@ -111,7 +111,7 @@
             minimumResultsForSearch: -1,
             placeholder: l('ChoosePlaceholder', l('HttpMethod'))
         })
-        _$searchBth.click(function() {
+        _$searchBth.click(function () {
             _dataTable.ajax.reload();
         });
         _$resetBth.click(function () {
@@ -130,8 +130,8 @@
             httpMethod: $('#search_httpMethod').val(),
             url: $('#search_url').val(),
             httpStatusCode: $('#search_httpStatusCode').val(),
-            startDate: new Date(date.split('~')[0] + '00:00:00'),
-            endDate: new Date(date.split('~')[1] + ' 23:59:59')
+            startDate: new Date(date.split('~')[0].trim() + ' 00:00:00'),
+            endDate: new Date(date.split('~')[1].trim() + ' 23:59:59')
         };
     }
 })(jQuery);
