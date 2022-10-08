@@ -8,15 +8,15 @@ using Microsoft.Extensions.DependencyInjection;
 namespace SuperAbp.AuditLogging;
 
 [DependsOn(
-    typeof(AuditLoggingApplicationContractsModule),
+    typeof(SuperAbpAuditLoggingApplicationContractsModule),
     typeof(AbpAspNetCoreMvcModule))]
-public class AuditLoggingHttpApiModule : AbpModule
+public class SuperAbpAuditLoggingHttpApiModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
         PreConfigure<IMvcBuilder>(mvcBuilder =>
         {
-            mvcBuilder.AddApplicationPartIfNotExists(typeof(AuditLoggingHttpApiModule).Assembly);
+            mvcBuilder.AddApplicationPartIfNotExists(typeof(SuperAbpAuditLoggingHttpApiModule).Assembly);
         });
     }
 

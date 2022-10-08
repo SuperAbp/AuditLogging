@@ -6,19 +6,19 @@ using Volo.Abp.Application;
 namespace SuperAbp.AuditLogging;
 
 [DependsOn(
-    typeof(AuditLoggingDomainModule),
-    typeof(AuditLoggingApplicationContractsModule),
+    typeof(SuperAbpAuditLoggingDomainModule),
+    typeof(SuperAbpAuditLoggingApplicationContractsModule),
     typeof(AbpDddApplicationModule),
     typeof(AbpAutoMapperModule)
     )]
-public class AuditLoggingApplicationModule : AbpModule
+public class SuperAbpAuditLoggingApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddAutoMapperObjectMapper<AuditLoggingApplicationModule>();
+        context.Services.AddAutoMapperObjectMapper<SuperAbpAuditLoggingApplicationModule>();
         Configure<AbpAutoMapperOptions>(options =>
         {
-            options.AddMaps<AuditLoggingApplicationModule>(validate: true);
+            options.AddMaps<SuperAbpAuditLoggingApplicationModule>(validate: true);
         });
     }
 }

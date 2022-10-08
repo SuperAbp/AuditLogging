@@ -7,11 +7,11 @@ using Volo.Abp.Modularity;
 namespace SuperAbp.AuditLogging.EntityFrameworkCore;
 
 [DependsOn(
-    typeof(AuditLoggingDomainModule),
+    typeof(SuperAbpAuditLoggingDomainModule),
     typeof(AbpEntityFrameworkCoreModule),
     typeof(AbpAuditLoggingEntityFrameworkCoreModule)
 )]
-public class AuditLoggingEntityFrameworkCoreModule : AbpModule
+public class SuperAbpAuditLoggingEntityFrameworkCoreModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

@@ -15,23 +15,23 @@ using Volo.Abp.Json;
 namespace SuperAbp.AuditLogging.Web;
 
 [DependsOn(
-    typeof(AuditLoggingApplicationContractsModule),
+    typeof(SuperAbpAuditLoggingApplicationContractsModule),
     typeof(AbpAspNetCoreMvcUiThemeSharedModule),
     typeof(AbpAutoMapperModule),
     typeof(SuperAbpAspNetCoreMvcUiSelect2ThemeModule)
     )]
-public class AuditLoggingWebModule : AbpModule
+public class SuperAbpAuditLoggingWebModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
         context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
         {
-            options.AddAssemblyResource(typeof(AuditLoggingResource), typeof(AuditLoggingWebModule).Assembly);
+            options.AddAssemblyResource(typeof(AuditLoggingResource), typeof(SuperAbpAuditLoggingWebModule).Assembly);
         });
 
         PreConfigure<IMvcBuilder>(mvcBuilder =>
         {
-            mvcBuilder.AddApplicationPartIfNotExists(typeof(AuditLoggingWebModule).Assembly);
+            mvcBuilder.AddApplicationPartIfNotExists(typeof(SuperAbpAuditLoggingWebModule).Assembly);
         });
     }
 
@@ -48,18 +48,18 @@ public class AuditLoggingWebModule : AbpModule
 
         Configure<AbpVirtualFileSystemOptions>(options =>
         {
-            options.FileSets.AddEmbedded<AuditLoggingWebModule>();
+            options.FileSets.AddEmbedded<SuperAbpAuditLoggingWebModule>();
         });
 
-        context.Services.AddAutoMapperObjectMapper<AuditLoggingWebModule>();
+        context.Services.AddAutoMapperObjectMapper<SuperAbpAuditLoggingWebModule>();
         Configure<AbpAutoMapperOptions>(options =>
         {
-            options.AddMaps<AuditLoggingWebModule>(validate: true);
+            options.AddMaps<SuperAbpAuditLoggingWebModule>(validate: true);
         });
 
         Configure<RazorPagesOptions>(options =>
         {
-                //Configure authorization.
-            });
+            //Configure authorization.
+        });
     }
 }

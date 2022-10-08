@@ -10,6 +10,6 @@ public abstract class AuditLoggingPageModel : AbpPageModel
     protected AuditLoggingPageModel()
     {
         LocalizationResourceType = typeof(AuditLoggingResource);
-        ObjectMapperContext = typeof(AuditLoggingWebModule);
+        ObjectMapperContext = typeof(SuperAbpAuditLoggingWebModule);
     }
 }

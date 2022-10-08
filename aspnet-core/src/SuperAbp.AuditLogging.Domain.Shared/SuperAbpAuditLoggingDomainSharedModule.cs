@@ -13,13 +13,13 @@ namespace SuperAbp.AuditLogging;
     typeof(AbpValidationModule),
     typeof(AbpAuditLoggingDomainSharedModule)
 )]
-public class AuditLoggingDomainSharedModule : AbpModule
+public class SuperAbpAuditLoggingDomainSharedModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         Configure<AbpVirtualFileSystemOptions>(options =>
         {
-            options.FileSets.AddEmbedded<AuditLoggingDomainSharedModule>();
+            options.FileSets.AddEmbedded<SuperAbpAuditLoggingDomainSharedModule>();
         });
 
         Configure<AbpLocalizationOptions>(options =>

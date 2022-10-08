@@ -81,7 +81,7 @@ namespace SuperAbp.AuditLogging;
     typeof(AbpTenantManagementApplicationModule),
     typeof(AbpTenantManagementHttpApiModule),
     typeof(AbpAspNetCoreAuthenticationJwtBearerModule),
-    typeof(AuditLoggingApplicationContractsModule),
+    typeof(SuperAbpAuditLoggingApplicationContractsModule),
     typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpSwashbuckleModule)
     )]

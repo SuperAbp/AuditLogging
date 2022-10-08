@@ -1,7 +1,7 @@
 {
   "culture": "en",
   "texts": {
-    "MyAccount":  "My account",
-    "SamplePageMessage": "A sample page for the AuditLogging module"
+    "Placeholder": "Placeholder {0}",
+    "ChoosePlaceholder": "ChoosePlaceholder {0}"
   }
 }

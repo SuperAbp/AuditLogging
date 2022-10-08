@@ -5,11 +5,10 @@ using Volo.Abp.Authorization;
 namespace SuperAbp.AuditLogging;
 
 [DependsOn(
-    typeof(AuditLoggingDomainSharedModule),
+    typeof(SuperAbpAuditLoggingDomainSharedModule),
     typeof(AbpDddApplicationContractsModule),
     typeof(AbpAuthorizationModule)
     )]
-public class AuditLoggingApplicationContractsModule : AbpModule
+public class SuperAbpAuditLoggingApplicationContractsModule : AbpModule
 {
-
 }

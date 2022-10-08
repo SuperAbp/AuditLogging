@@ -55,9 +55,9 @@ using Volo.Abp.VirtualFileSystem;
 namespace SuperAbp.AuditLogging;
 
 [DependsOn(
-    typeof(AuditLoggingWebModule),
-    typeof(AuditLoggingHttpApiClientModule),
-    typeof(AuditLoggingHttpApiModule),
+    typeof(SuperAbpAuditLoggingWebModule),
+    typeof(SuperAbpAuditLoggingHttpApiClientModule),
+    typeof(SuperAbpAuditLoggingHttpApiModule),
     typeof(AbpAspNetCoreAuthenticationOpenIdConnectModule),
     typeof(AbpAspNetCoreMvcClientModule),
     typeof(AbpHttpClientWebModule),
@@ -85,8 +85,8 @@ public class AuditLoggingWebHostModule : AbpModule
         {
             options.AddAssemblyResource(
                 typeof(AuditLoggingResource),
-                typeof(AuditLoggingDomainSharedModule).Assembly,
-                typeof(AuditLoggingApplicationContractsModule).Assembly,
+                typeof(SuperAbpAuditLoggingDomainSharedModule).Assembly,
+                typeof(SuperAbpAuditLoggingApplicationContractsModule).Assembly,
                 typeof(AuditLoggingWebHostModule).Assembly
             );
         });
@@ -184,9 +184,9 @@ public class AuditLoggingWebHostModule : AbpModule
         {
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.ReplaceEmbeddedByPhysical<AuditLoggingDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}SuperAbp.AuditLogging.Domain", Path.DirectorySeparatorChar)));
-                options.FileSets.ReplaceEmbeddedByPhysical<AuditLoggingApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}SuperAbp.AuditLogging.Application.Contracts", Path.DirectorySeparatorChar)));
-                options.FileSets.ReplaceEmbeddedByPhysical<AuditLoggingWebModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}SuperAbp.AuditLogging.Web", Path.DirectorySeparatorChar)));
+                options.FileSets.ReplaceEmbeddedByPhysical<SuperAbpAuditLoggingDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}SuperAbp.AuditLogging.Domain", Path.DirectorySeparatorChar)));
+                options.FileSets.ReplaceEmbeddedByPhysical<SuperAbpAuditLoggingApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}SuperAbp.AuditLogging.Application.Contracts", Path.DirectorySeparatorChar)));
+                options.FileSets.ReplaceEmbeddedByPhysical<SuperAbpAuditLoggingWebModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}SuperAbp.AuditLogging.Web", Path.DirectorySeparatorChar)));
             });
         }
     }

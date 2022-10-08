@@ -6,9 +6,9 @@ namespace SuperAbp.AuditLogging;
 
 [DependsOn(
     typeof(AbpDddDomainModule),
-    typeof(AuditLoggingDomainSharedModule),
+    typeof(SuperAbpAuditLoggingDomainSharedModule),
     typeof(AbpAuditLoggingDomainModule)
 )]
-public class AuditLoggingDomainModule : AbpModule
+public class SuperAbpAuditLoggingDomainModule : AbpModule
 {
 }

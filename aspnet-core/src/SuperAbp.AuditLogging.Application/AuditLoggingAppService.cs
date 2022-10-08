@@ -8,6 +8,6 @@ public abstract class AuditLoggingAppService : ApplicationService
     protected AuditLoggingAppService()
     {
         LocalizationResource = typeof(AuditLoggingResource);
-        ObjectMapperContext = typeof(AuditLoggingApplicationModule);
+        ObjectMapperContext = typeof(SuperAbpAuditLoggingApplicationModule);
     }
 }

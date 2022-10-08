@@ -6,21 +6,20 @@ using Volo.Abp.VirtualFileSystem;
 namespace SuperAbp.AuditLogging;
 
 [DependsOn(
-    typeof(AuditLoggingApplicationContractsModule),
+    typeof(SuperAbpAuditLoggingApplicationContractsModule),
     typeof(AbpHttpClientModule))]
-public class AuditLoggingHttpApiClientModule : AbpModule
+public class SuperAbpAuditLoggingHttpApiClientModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         context.Services.AddHttpClientProxies(
-            typeof(AuditLoggingApplicationContractsModule).Assembly,
+            typeof(SuperAbpAuditLoggingApplicationContractsModule).Assembly,
             AuditLoggingRemoteServiceConsts.RemoteServiceName
         );
 
         Configure<AbpVirtualFileSystemOptions>(options =>
         {
-            options.FileSets.AddEmbedded<AuditLoggingHttpApiClientModule>();
+            options.FileSets.AddEmbedded<SuperAbpAuditLoggingHttpApiClientModule>();
         });
-
     }
 }
