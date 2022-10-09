@@ -1,5 +1,5 @@
 ﻿(function ($) {
-    var l = abp.localization.getResource('AuditLogging');
+    var l = abp.localization.getResource('SuperAbpAuditLogging');
 
     var _auditLoggingAppService = superAbp.auditLogging.auditLog;
 

@@ -2,7 +2,7 @@
 
 namespace SuperAbp.AuditLogging.Localization;
 
-[LocalizationResourceName("AuditLogging")]
+[LocalizationResourceName("SuperAbpAuditLogging")]
 public class AuditLoggingResource
 {
 
