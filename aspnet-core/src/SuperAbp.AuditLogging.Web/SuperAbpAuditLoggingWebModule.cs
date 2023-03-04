@@ -39,7 +39,7 @@ public class SuperAbpAuditLoggingWebModule : AbpModule
     {
         Configure<AbpJsonOptions>(options =>
         {
-            options.DefaultDateTimeFormat = "yyyy-MM-dd HH:mm:ss";
+            options.OutputDateTimeFormat = "yyyy-MM-dd HH:mm:ss";
         });
         Configure<AbpNavigationOptions>(options =>
         {

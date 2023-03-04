@@ -41,6 +41,7 @@ using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.Threading;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
 
 namespace SuperAbp.AuditLogging;
 
@@ -72,7 +73,7 @@ namespace SuperAbp.AuditLogging;
     typeof(AbpTenantManagementApplicationModule),
     typeof(AbpTenantManagementHttpApiModule),
     typeof(AbpTenantManagementEntityFrameworkCoreModule),
-    typeof(AbpAspNetCoreMvcUiBasicThemeModule),
+    typeof(AbpAspNetCoreMvcUiLeptonXLiteThemeModule),
     typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpSwashbuckleModule)
     )]
