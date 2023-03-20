@@ -4,7 +4,7 @@ namespace SuperAbp.AuditLogging.Permissions;
 
 public class AuditLoggingPermissions
 {
-    public const string GroupName = "AuditLogging";
+    public const string GroupName = "SuperAbpAuditLogging";
 
     public static class AuditLogs
     {
