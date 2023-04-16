@@ -9,6 +9,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>SuperAbp.AuditLogging.Web</RootNamespace>
     <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+	  <PackageProjectUrl>https://superabp.com/</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/SuperAbp/AuditLogging</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

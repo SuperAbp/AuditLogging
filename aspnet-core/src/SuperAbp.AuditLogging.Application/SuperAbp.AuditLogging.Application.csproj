@@ -5,6 +5,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>SuperAbp.AuditLogging</RootNamespace>
+    <PackageProjectUrl>https://superabp.com/</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
