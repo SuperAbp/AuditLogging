@@ -5,6 +5,10 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>SuperAbp.AuditLogging</RootNamespace>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <Authors>SuperAbp</Authors>
+	  <Company>SuperAbp</Company>
+	  <Product>SuperAbp.AuditLogging</Product>
 	  <PackageProjectUrl>https://superabp.com/</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/SuperAbp/AuditLogging</RepositoryUrl>
   </PropertyGroup>
