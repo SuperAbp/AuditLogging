@@ -14,7 +14,6 @@ public class UnifiedDbContext : AbpDbContext<UnifiedDbContext>
     public UnifiedDbContext(DbContextOptions<UnifiedDbContext> options)
         : base(options)
     {
-
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -23,10 +22,9 @@ public class UnifiedDbContext : AbpDbContext<UnifiedDbContext>
 
         modelBuilder.ConfigurePermissionManagement();
         modelBuilder.ConfigureSettingManagement();
-        modelBuilder.ConfigureAuditLogging();
+        modelBuilder.ConfigureSuperAbpAuditLogging();
         modelBuilder.ConfigureIdentity();
         modelBuilder.ConfigureFeatureManagement();
         modelBuilder.ConfigureTenantManagement();
-        modelBuilder.ConfigureAuditLogging();
     }
 }

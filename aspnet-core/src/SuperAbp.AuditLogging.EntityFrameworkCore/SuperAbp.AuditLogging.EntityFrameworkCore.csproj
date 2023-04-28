@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <Compile Remove="EntityFrameworkCore\AuditLoggingDbContext.cs" />
-    <Compile Remove="EntityFrameworkCore\AuditLoggingDbContextModelCreatingExtensions.cs" />
-    <Compile Remove="EntityFrameworkCore\AuditLoggingModelBuilderConfigurationOptions.cs" />
     <Compile Remove="EntityFrameworkCore\IAuditLoggingDbContext.cs" />
   </ItemGroup>
 
