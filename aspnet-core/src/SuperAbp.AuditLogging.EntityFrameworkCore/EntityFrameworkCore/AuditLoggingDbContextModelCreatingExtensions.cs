@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using Volo.Abp;
+using Volo.Abp.AuditLogging.EntityFrameworkCore;
 
 namespace SuperAbp.AuditLogging.EntityFrameworkCore;
 
 public static class AuditLoggingDbContextModelCreatingExtensions
 {
-    public static void ConfigureAuditLogging(
+    public static void ConfigureSuperAbpAuditLogging(
         this ModelBuilder builder,
             Action<AuditLoggingModelBuilderConfigurationOptions> optionsAction = null)
     {
@@ -18,5 +19,7 @@ public static class AuditLoggingDbContextModelCreatingExtensions
             );
 
         optionsAction?.Invoke(options);
+
+        builder.ConfigureAuditLogging();
     }
 }
