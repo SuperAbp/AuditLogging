@@ -18,8 +18,8 @@
 
   <ItemGroup>
     <PackageReference Include="SuperAbp.AspNetCore.Mvc.UI.Packages.Select2.Theme" Version="5.2.0" />
-    <PackageReference Include="Volo.Abp.AutoMapper" Version="7.1.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="7.1.0" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="7.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="7.2.1" />
   </ItemGroup>
 
   <ItemGroup>
