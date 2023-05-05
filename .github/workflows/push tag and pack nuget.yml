@@ -15,9 +15,9 @@ jobs:
   
     - name: Package with dotnet
       run: dotnet pack -c Release  --output nupkgs /p:Version=${{ github.ref_name }}
-      working-directory: SP.Te
+      working-directory: aspnet-core
       
     - name: Push generated package to GitHub registry
       run: |
         nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }} -NoSymbols 
-      working-directory: SP.Te/nupkgs
+      working-directory: aspnet-core/nupkgs
