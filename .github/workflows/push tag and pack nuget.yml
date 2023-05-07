@@ -19,5 +19,5 @@ jobs:
       
     - name: Push generated package to GitHub registry
       run: |
-        nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }} -NoSymbols 
+        nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey ${{ secrets.NUGETKEY }} -SkipDuplicate -NoSymbols 
       working-directory: aspnet-core/nupkgs
