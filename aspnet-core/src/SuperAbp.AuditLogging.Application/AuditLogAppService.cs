@@ -18,13 +18,13 @@ namespace SuperAbp.AuditLogging
     [Authorize(AuditLoggingPermissions.AuditLogs.Default)]
     public class AuditLogAppService : AuditLoggingAppService, IAuditLogAppService
     {
-        private readonly IRepository<AuditLog, Guid> _logRepository;
+        private readonly IAuditLogRepository _logRepository;
 
         /// <summary>
         /// 构造
         /// </summary>
         /// <param name="logRepository"></param>
-        public AuditLogAppService(IRepository<AuditLog, Guid> logRepository)
+        public AuditLogAppService(IAuditLogRepository logRepository)
         {
             _logRepository = logRepository;
         }

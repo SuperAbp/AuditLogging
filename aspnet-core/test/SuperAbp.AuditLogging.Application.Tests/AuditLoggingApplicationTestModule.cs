@@ -3,10 +3,9 @@
 namespace SuperAbp.AuditLogging;
 
 [DependsOn(
-    typeof(AuditLoggingApplicationModule),
+    typeof(SuperAbpAuditLoggingApplicationModule),
     typeof(AuditLoggingDomainTestModule)
     )]
 public class AuditLoggingApplicationTestModule : AbpModule
 {
-
 }

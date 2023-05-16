@@ -12,10 +12,14 @@ namespace SuperAbp.AuditLogging;
     typeof(AbpAutofacModule),
     typeof(AbpTestBaseModule),
     typeof(AbpAuthorizationModule),
-    typeof(AuditLoggingDomainModule)
+    typeof(SuperAbpAuditLoggingDomainModule)
     )]
 public class AuditLoggingTestBaseModule : AbpModule
 {
+    public override void PreConfigureServices(ServiceConfigurationContext context)
+    {
+    }
+
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         context.Services.AddAlwaysAllowAuthorization();
