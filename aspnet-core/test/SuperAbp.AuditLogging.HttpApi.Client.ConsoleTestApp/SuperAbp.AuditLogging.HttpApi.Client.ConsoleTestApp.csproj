@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="7.3.0" />
-    <PackageReference Include="Volo.Abp.Autofac" Version="7.3.0" />
+    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="7.4.0" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="7.4.0" />
     <ProjectReference Include="..\..\src\SuperAbp.AuditLogging.HttpApi.Client\SuperAbp.AuditLogging.HttpApi.Client.csproj" />
   </ItemGroup>
 
@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="7.2.1" />
-    <PackageReference Include="Volo.Abp.Autofac" Version="7.2.1" />
+    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="7.4.0" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="7.4.0" />
     <ProjectReference Include="..\..\src\SuperAbp.AuditLogging.HttpApi.Client\SuperAbp.AuditLogging.HttpApi.Client.csproj" />
   </ItemGroup>
 

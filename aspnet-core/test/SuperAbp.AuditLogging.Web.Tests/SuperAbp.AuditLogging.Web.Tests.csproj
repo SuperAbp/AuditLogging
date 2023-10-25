@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -18,7 +18,7 @@
     <PackageReference Include="HtmlAgilityPack" Version="1.11.42" />
     <ProjectReference Include="..\SuperAbp.AuditLogging.Application.Tests\SuperAbp.AuditLogging.Application.Tests.csproj" />
     <ProjectReference Include="..\..\src\SuperAbp.AuditLogging.Web\SuperAbp.AuditLogging.Web.csproj" />
-    <PackageReference Include="Volo.Abp.AspNetCore.TestBase" Version="7.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.TestBase" Version="7.4.0" />
   </ItemGroup>
 
   <ItemGroup>
