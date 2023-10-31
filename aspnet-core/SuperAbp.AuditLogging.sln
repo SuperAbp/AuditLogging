@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.Appli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{649A3FFA-182F-4E56-9717-E6A9A2BEC545}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CCD2960C-23CC-4AB4-B84D-60C7AAA52F4D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "host", "host", "{E400416D-2895-4512-9D17-90681EEC7E0A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.HttpApi", "src\SuperAbp.AuditLogging.HttpApi\SuperAbp.AuditLogging.HttpApi.csproj", "{077AA5F8-8B61-420C-A6B5-0150A66FDB34}"
@@ -32,12 +30,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.Host.Shared", "host\SuperAbp.AuditLogging.Host.Shared\SuperAbp.AuditLogging.Host.Shared.csproj", "{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.Web.Unified", "host\SuperAbp.AuditLogging.Web.Unified\SuperAbp.AuditLogging.Web.Unified.csproj", "{3D872C41-E226-45C8-89C1-9D3DBD7C73F2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.Application.Tests", "test\SuperAbp.AuditLogging.Application.Tests\SuperAbp.AuditLogging.Application.Tests.csproj", "{9378F4A9-6064-44D9-BCE6-14231CDA3877}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.Domain.Tests", "test\SuperAbp.AuditLogging.Domain.Tests\SuperAbp.AuditLogging.Domain.Tests.csproj", "{100022BD-5CCB-4336-8E4D-FF0BAC00ECDB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.TestBase", "test\SuperAbp.AuditLogging.TestBase\SuperAbp.AuditLogging.TestBase.csproj", "{06B5E99E-E02F-41F6-97E4-4D5067614836}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperAbp.AuditLogging.EntityFrameworkCore", "src\SuperAbp.AuditLogging.EntityFrameworkCore\SuperAbp.AuditLogging.EntityFrameworkCore.csproj", "{BAB1B5B1-3EC1-401A-8C57-8C38D9F62FF4}"
 EndProject
@@ -95,18 +87,6 @@ Global
 		{3D872C41-E226-45C8-89C1-9D3DBD7C73F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D872C41-E226-45C8-89C1-9D3DBD7C73F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D872C41-E226-45C8-89C1-9D3DBD7C73F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9378F4A9-6064-44D9-BCE6-14231CDA3877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9378F4A9-6064-44D9-BCE6-14231CDA3877}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9378F4A9-6064-44D9-BCE6-14231CDA3877}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9378F4A9-6064-44D9-BCE6-14231CDA3877}.Release|Any CPU.Build.0 = Release|Any CPU
-		{100022BD-5CCB-4336-8E4D-FF0BAC00ECDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{100022BD-5CCB-4336-8E4D-FF0BAC00ECDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{100022BD-5CCB-4336-8E4D-FF0BAC00ECDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{100022BD-5CCB-4336-8E4D-FF0BAC00ECDB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06B5E99E-E02F-41F6-97E4-4D5067614836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06B5E99E-E02F-41F6-97E4-4D5067614836}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06B5E99E-E02F-41F6-97E4-4D5067614836}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06B5E99E-E02F-41F6-97E4-4D5067614836}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BAB1B5B1-3EC1-401A-8C57-8C38D9F62FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAB1B5B1-3EC1-401A-8C57-8C38D9F62FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAB1B5B1-3EC1-401A-8C57-8C38D9F62FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -128,9 +108,6 @@ Global
 		{690203F4-3CD5-4569-88D9-EE831EEA5F5F} = {E400416D-2895-4512-9D17-90681EEC7E0A}
 		{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB} = {E400416D-2895-4512-9D17-90681EEC7E0A}
 		{3D872C41-E226-45C8-89C1-9D3DBD7C73F2} = {E400416D-2895-4512-9D17-90681EEC7E0A}
-		{9378F4A9-6064-44D9-BCE6-14231CDA3877} = {CCD2960C-23CC-4AB4-B84D-60C7AAA52F4D}
-		{100022BD-5CCB-4336-8E4D-FF0BAC00ECDB} = {CCD2960C-23CC-4AB4-B84D-60C7AAA52F4D}
-		{06B5E99E-E02F-41F6-97E4-4D5067614836} = {CCD2960C-23CC-4AB4-B84D-60C7AAA52F4D}
 		{BAB1B5B1-3EC1-401A-8C57-8C38D9F62FF4} = {649A3FFA-182F-4E56-9717-E6A9A2BEC545}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

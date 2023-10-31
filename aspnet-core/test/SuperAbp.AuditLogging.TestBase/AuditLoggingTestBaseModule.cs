@@ -16,10 +16,6 @@ namespace SuperAbp.AuditLogging;
     )]
 public class AuditLoggingTestBaseModule : AbpModule
 {
-    public override void PreConfigureServices(ServiceConfigurationContext context)
-    {
-    }
-
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         context.Services.AddAlwaysAllowAuthorization();
