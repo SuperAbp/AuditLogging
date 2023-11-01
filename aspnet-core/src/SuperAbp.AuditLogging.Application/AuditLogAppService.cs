@@ -12,33 +12,21 @@ using Volo.Abp.Domain.Repositories;
 
 namespace SuperAbp.AuditLogging
 {
-    /// <summary>
-    /// 日志管理
-    /// </summary>
     [Authorize(AuditLoggingPermissions.AuditLogs.Default)]
     public class AuditLogAppService : AuditLoggingAppService, IAuditLogAppService
     {
-        private readonly IAuditLogRepository _logRepository;
+        protected IAuditLogRepository LogRepository { get; }
 
-        /// <summary>
-        /// 构造
-        /// </summary>
-        /// <param name="logRepository"></param>
         public AuditLogAppService(IAuditLogRepository logRepository)
         {
-            _logRepository = logRepository;
+            LogRepository = logRepository;
         }
 
-        /// <summary>
-        /// 分页
-        /// </summary>
-        /// <param name="input">查询参数</param>
-        /// <returns></returns>
-        public async Task<PagedResultDto<AuditLogListDto>> GetListAsync(GetAuditLogsInput input)
+        public virtual async Task<PagedResultDto<AuditLogListDto>> GetListAsync(GetAuditLogsInput input)
         {
             await NormalizeMaxResultCountAsync(input);
 
-            var queryable = await _logRepository.GetQueryableAsync();
+            var queryable = await LogRepository.GetQueryableAsync();
             var tempQuery = queryable
                 .WhereIf(!input.HttpMethod.IsNullOrEmpty(), l => l.HttpMethod.Equals(input.HttpMethod))
                 .WhereIf(!input.Url.IsNullOrEmpty(), l => l.Url.Contains(input.Url))
@@ -60,18 +48,13 @@ namespace SuperAbp.AuditLogging
             return new PagedResultDto<AuditLogListDto>(totalCount, dtos);
         }
 
-        /// <summary>
-        /// 详情
-        /// </summary>
-        /// <param name="id">主键</param>
-        /// <returns></returns>
-        public async Task<AuditLogDetailDto> GetDetailAsync(Guid id)
+        public virtual async Task<AuditLogDetailDto> GetDetailAsync(Guid id)
         {
-            AuditLog log = await _logRepository.GetAsync(id);
+            AuditLog log = await LogRepository.GetAsync(id);
             return ObjectMapper.Map<AuditLog, AuditLogDetailDto>(log);
         }
 
-        private async Task NormalizeMaxResultCountAsync(PagedAndSortedResultRequestDto input)
+        protected virtual async Task NormalizeMaxResultCountAsync(PagedAndSortedResultRequestDto input)
         {
             var maxPageSize = (await SettingProvider.GetOrNullAsync(AuditLogSetings.MaxPageSize))?.To<int>();
             if (maxPageSize.HasValue && input.MaxResultCount > maxPageSize.Value)
