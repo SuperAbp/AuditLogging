@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using SuperAbp.AuditLogging.Dtos;
 using Volo.Abp;
